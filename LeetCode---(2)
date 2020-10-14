@@ -1,0 +1,19 @@
+/* Question:- Given a 32-bit signed integer, reverse digits of an integer */
+
+class ReverseInteger {
+    public int reverse(int x) {
+      
+        long rev=0;//datatype is "long" So that it can store reversed number of out of Integer Range
+        while(x!=0){
+            int rem=x%10;
+            rev=rem+(rev*10);
+            x=x/2;
+        }
+        if(rev<Integer.MAX_VALUE && rev>Integer.MIN_VALUE){//predefined-----(-2^31  to 2^31-1)
+          return (int)rev; //return type must be "INTEGER"___so we typecast long to int
+        }
+        else{
+          return 0;
+        }
+    }
+}
