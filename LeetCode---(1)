@@ -1,1 +1,25 @@
+/* Question:- Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target */
 
+/* You can do the problem by taking two for loop but that will take O(n^2) time complexity */
+/* So we will do it in O(n) time complexity */
+
+
+public class Check{
+      public int[] twoSum(int[] nums, int target) {
+        HashMap<Integer,Integer> map=new HashMap<>();
+        int[] arr=new int[2];// we need to return array with two index
+        int i;//"i" will be needed while returning so declared outside of the loop
+        for(i=0;i<nums.length;i++){
+            if(!map.containsKey(target-nums[i])){//if we get this Key on map that means this array index value PLUS the key that we got from map will return taget value
+                map.put(nums[i],i);//we will put the key with current index value and value with index
+            }
+            else{
+                break;//if we found then we no need to proceed further So we break with current index
+            }
+        }
+        arr[0]=map.get(target-nums[i]);
+        arr[1]=i;   
+        return arr;
+    }
+
+}
