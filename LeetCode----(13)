@@ -1,0 +1,37 @@
+/* ROMAN TO INTEGER */
+
+class Conversion {
+    public int romanToInt(String s) {
+        
+        HashMap<Character,Integer> map=new HashMap<>();//map is used to store all the Roman Numbers as KEY and their corresponding values as VALUE
+        map.put('I',1);
+        map.put('V',5);
+        map.put('X',10);
+        map.put('L',50);
+        map.put('C',100);
+        map.put('D',500);
+        map.put('M',1000);
+        int sum=0;
+        
+        for(int i=0;i<s.length();i++){
+            int a=map.get(s.charAt(i));//get one index value
+            if(i+1<s.length()){//IT IS FOR THE LAST INDEX
+                int b=map.get(s.charAt(i+1));//"a" to be compared with the next value
+                if(a>=b){
+                    sum+=a;//suppose "VI"------a=V(5) & b=I(1)----a is greater than b----so we only use a to sum
+                           //but here we dont increment (i) as only one index value is used
+                }
+                else{
+                    sum+=b-a;//suppose "IV"----a=I(1) & b=V(5)----b is greater than a----so we substract a from b
+                    i++;//here we increment (i) as we have used both a and b
+                }
+            }
+            else{
+                sum+=a;//for the last value only.....because it dont have value to compare with
+            }
+        }
+        
+        return sum;
+        
+    }
+}
