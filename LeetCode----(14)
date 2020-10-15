@@ -1,0 +1,42 @@
+/* Write a function to find the longest common prefix string amongst an array of strings */
+
+class CommonPrefix {
+    public String longestCommonPrefix(String[] strs) {
+        if(strs.length==0){
+            return "";//return empty string when iput string is null
+        }
+        if(strs.length==1){//if there is only one string then that is common to it so return it
+            return strs[0];
+        }
+        
+        String s1=strs[0];
+        
+        //take one string outside of loop
+        //becoz from loop we will take another string and then find common between them 
+        //then from these two we will get common
+        //now from loop we will take another string and check with this common string
+        
+        //so we take one outside becoz if we do (i+1) then you will get wrong
+        
+        for(int i=1;i<strs.length;i++){
+            String s2=strs[i];
+            s1=common(s1,s2);
+        }
+        return s1;
+    }
+    public String common(String a,String b){//find common between two strings
+        String s="";
+        int len=a.length()<b.length()?a.length():b.length();//return length of less string
+        //5<6(true)---return 5====7<4(false)----return 4
+        for(int i=0;i<len;i++){
+            if(a.charAt(i)==b.charAt(i)){
+                s=s+a.charAt(i);
+            }
+            else{
+                break;//because we are to find common from start index
+            }
+        }
+        return s;
+        
+    }
+}
