@@ -1,6 +1,6 @@
 /* Question:- Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target */
 
-/* You can do the problem by taking two for loop but that will take O(n^2) time complexity */
+/* You can do the problem by taking two for loop but that will take O(n^2) time complexity  */
 /* So we will do it in O(n) time complexity */
 
 
