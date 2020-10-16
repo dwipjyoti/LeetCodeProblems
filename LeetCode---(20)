@@ -1,0 +1,40 @@
+class Parenthesis {
+    public boolean isValid(String s) {
+        HashMap<Character,Character> map=new HashMap<>();
+        map.put('(',')');
+        map.put('{','}');
+        map.put('[',']');
+        Stack<Character> st=new Stack<>();
+        
+        /* We use stack to store the left parenthesis
+         * now if the stack popped parenthesis is equal to the current index of string parenthesis
+         * then it is valid
+         * if at any instance we get that popped braket is not equal to the current
+         * then we return False
+         */
+        for(int i=0;i<s.length();i++){
+              if(map.containsKey(s.charAt(i))){
+                    st.push(s.charAt(i));
+              }
+              else if(!st.isEmpty() && s.charAt(i)==map.get(st.peek())){
+                    st.pop();
+              }
+              else{
+                
+                  //break; ----DONOT USE break
+                  /* why not use break because "[" you have this input then stack will be empty
+                   * and stack empty means it will return true
+                   * but it is not a valid parenthesis
+                   * so we return false to the function
+                   */
+                  
+                  return false;
+                  
+              }
+              
+        }
+        return st.isEmpty();//stack empty means all parenthesis are correctly popped
+        
+        
+    }
+}
