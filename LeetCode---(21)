@@ -16,7 +16,7 @@ class Solution {
         ListNode list=new ListNode();
        
         ListNode head;  // head should be taken so that it stores the list
-        head=list;      // becoz on return time we need to return head.next
+        head=list;      // becoz on return time we need to return head.next  "otherwise" if you return list then you will only get the current list
                         // dont return head becoz head has a value=0 bydefault
         
         while(l1 !=null && l2 != null){ //Dont use---"L1.next != null"____as then at last node it will create problem
