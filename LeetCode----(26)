@@ -1,0 +1,18 @@
+/* Remove Duplicates from Sorted Array (without extra space) */
+/* [1,1,2,2,2,3,3]______[1,1,2] */
+
+/* THE IDEA OF DOING THIS PROBLEM IS :- BRING ALL THE UNIQUE ELEMENTS IN FRONT AND TAKE ALL DUPLICATES TO BACK */
+
+
+public int remove(int[] nums){
+      int j=0;  //counter that will return as unique elements array length at last....j is pointing to unique element index at every iteration
+      for(int i=1;i<nums.length;i++){
+          if(nums[i]!=nums[j]){
+              j++; //increment j and replace j index with i index value ...... upto j all are unique
+              nums[j]=nums[i];
+              /* j and i value gets same so that in next iteration we can proceed with current i element which is also in j */
+          }
+      }//otherwise continue with next
+      
+      return j+1;//for length of array we add 1
+}
