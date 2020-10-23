@@ -1,0 +1,17 @@
+/* Question :- Remove Element from Array and Return new Array Length (Remove Inplace) */
+/* arr=[3,2,2,3] val=3 */
+
+/* IDEA :- bring all the no-matching values in-front.....and all matching back */
+
+public int remove(int[] nums, int val){
+    int j=0; //counter
+    for(int i=0;i<nums.length;i++){// i will also start from 0 as we will check each element
+        if(nums[i]!=val){
+            nums[j]=nums[i];//1st replace then increment......so that the current i doesnot get replaced...becoz we are to check this i in next iteration with value
+            j++;
+        }
+        //otherwise continue
+    }
+    return j;//here not j+1 becoz j is on next index......so its already j+1
+
+}
