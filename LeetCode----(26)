@@ -3,6 +3,8 @@
 
 /* THE IDEA OF DOING THIS PROBLEM IS :- "BRING ALL THE UNIQUE ELEMENTS IN FRONT AND TAKE ALL DUPLICATES TO BACK" */
 
+/* Take a counter at index 0 and after interation must remember upto counter all values should be unique */
+
 
 public int remove(int[] nums){
       int j=0;  //counter that will return as unique elements array length at last....j is pointing to unique element index at every iteration
