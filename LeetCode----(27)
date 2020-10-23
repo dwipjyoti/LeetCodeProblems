@@ -1,7 +1,7 @@
 /* Question :- Remove Element from Array and Return new Array Length (Remove Inplace) */
 /* arr=[3,2,2,3] val=3 */
 
-/* IDEA :- bring all the no-matching values in-front.....and all matching back */
+/* IDEA :- bring all the no-matching values in-front */
 
 public int remove(int[] nums, int val){
     int j=0; //counter
@@ -15,3 +15,9 @@ public int remove(int[] nums, int val){
     return j;//here not j+1 becoz j is on next index......so its already j+1
 
 }
+
+/*
+    j              j          j            j
+    i              i            i            i
+    3 2 2 3      2 2 2 3    2 2 2 3    2 2 2 3  -------we are to return length so j....NOT j+1 becoz j+1=3....and here j is on index 2
+*/
