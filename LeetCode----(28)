@@ -13,7 +13,10 @@
             return -1;
         }
         int index=-1;
-        for(int i=0;i<haystack.length-needle.length;i++){//this will keep track on the bigger string that is haystack
+        for(int i=0;i<=haystack.length-needle.length;i++){//this will keep track on the bigger string that is haystack
+            /* i<=haystack.length()-needle.length()    
+             * becoz we will match needle with haystack so starting at haystack index we should have length upto needle
+             */
             int j;
             for(j=0;j<needle.length;j++){//this will be on the smaller string that is needle
                 if(haystack.charAt(i+j)!=needle.charAt(j)){
