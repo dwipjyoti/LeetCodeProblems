@@ -1,5 +1,6 @@
 /* Question :- Implement strStr()
- * Return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
+ *             Return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
+ *             Return 0 when needle is an empty string.
  */
  
  
@@ -12,15 +13,15 @@
             return -1;
         }
         int index=-1;
-        for(int i=0;i<haystack.length-needle.length;i++){
+        for(int i=0;i<haystack.length-needle.length;i++){//this will keep track on the bigger string that is haystack
             int j;
-            for(j=0;j<needle.length;j++){
+            for(j=0;j<needle.length;j++){//this will be on the smaller string that is needle
                 if(haystack.charAt(i+j)!=needle.charAt(j)){
                     break;
                 }
             }
-            if(j==needle.length){
-                index=i;
+            if(j==needle.length){//when j becomes euqal to length of needle means that our string is matched
+                index=i;//as i is the starting index from where matching has started so return i
                 break;
             }
         }
