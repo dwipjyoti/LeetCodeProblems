@@ -3,7 +3,7 @@
 /* USE TWO POINTER PROBLEM */
 /* one pointer will be at index 0  &  one pointer will be at last index */
 /* traverse the array until i<=j */
-/* if we get our target at i index then reutrn i and break simillarly for j */
+/* if we get our target at i index then reutrn i simillarly for j */
 /* if not found in both i and j then increment i and decrement j */
 /* O(n) time complexity */
 
