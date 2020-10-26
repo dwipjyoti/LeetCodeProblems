@@ -1,4 +1,4 @@
-/* SEARCH IN ROTATED SORTED ARRAY */
+/* Question :- SEARCH IN ROTATED SORTED ARRAY */
 
 /* USE TWO POINTER PROBLEM */
 /* one pointer will be at index 0  &  one pointer will be at last index */
