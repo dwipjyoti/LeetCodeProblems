@@ -6,9 +6,11 @@
                Traverse the Array
                If target found then return index Else
                Check If the array value is greater than target or not
-               If smaller then continue else
+               If smaller then continue as array value is in correct sorted order
+               else
                If greater than target value then return index
-               This is because that index is for taget value as array is sorted */
+               This is because that index is for taget value as array is sorted
+               As smaller comes first in sorted array */
                
 
 
