@@ -32,6 +32,7 @@ class Solution {
  */
 
 
+
 /* why power gets half
  * 2*2*2*2   power 4   num=2
  * can be written as (2^2)*(2^2)=(2*2)^2    power 2 and num=2*2
