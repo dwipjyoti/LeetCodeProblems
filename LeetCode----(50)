@@ -22,6 +22,8 @@ class Solution {
     }
 }
 
+
+
 /*  (2,10)----power even
  *  (2*2,5)---now power odd
  *  4*(4*4,2)-now power even
