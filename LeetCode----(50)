@@ -1,0 +1,45 @@
+class Solution {
+    public double myPow(double x, int n) {
+        if(n==0){
+            return 1;
+        }
+        int num=n<0?-n:n;//to make power positive value
+        double ans=1;
+        
+        //for even
+        if(num%2==0){
+            ans=myPow(x*x,num/2);//takes time complexity O(log n) as problem divides in half
+        }
+        else{//odd
+            ans=x*myPow(x*x,num/2);
+        }
+        if(n<0 && n>Integer.MIN_VALUE){
+            return 1/ans;//2^-2  ===  1/2^2
+        }
+        else{
+            return ans;
+        }
+    }
+}
+
+/*  (2,10)----power even
+ *  (2*2,5)---now power odd
+ *  4*(4*4,2)-now power even
+ *  4*(16*16,1)-now power odd
+ *  4*256*(256*256,0)-- power 0 means this function will return 1
+ *  4*256*1
+ *  1024
+ */
+
+
+/* why power gets half
+ * 2*2*2*2   power 4   num=2
+ * can be written as (2^2)*(2^2)=(2*2)^2    power 2 and num=2*2
+ * power gets half and num gets double so (log n)
+ * we are using the previous say 2^2 value to get 2^4
+ *
+ *
+ * odd
+ * 2*2*2*2*2
+ * 2*(2*2)^2 ----- one num gets multiplied and rest is like even
+ */
