@@ -18,7 +18,7 @@ class Solution {
          * so we have to consider this and return 0 to the function
          */
          
-        while((i>=0)&&(s.charAt(i)==' ')){//condition must be in sequence otherwise charAt(-1)---error
+        while((i>=0)&&(s.charAt(i)==' ')){//condition must be in sequence otherwise charAt(-1)-_--error
             i=i-1;
             
         }
