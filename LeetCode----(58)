@@ -1,5 +1,7 @@
 /* Question :- Length of Last Word of a String */
 
+/* We can solve it by In-Built methods also shown in last */
+
 
 class Solution {
     public int lengthOfLastWord(String s) {
@@ -30,7 +32,30 @@ class Solution {
             count++;
             i--;
         }
-        return count;
-        
+        return count;   
     }
 }
+
+/*    *****by In_Built Method split()*****     
+public int lengthOfLastWord(String s){
+    if(s.length==0){
+        return 0;
+    }
+    String[] str=s.split(" ");//In_Built method split().......splits up the string on blanck space and return an array
+    
+    String last=str[str.length-1];//get the last word from the string array
+    
+    return last.length();//return length of the string/word
+}
+*/
+
+
+
+/* ******trim()****** 
+This method eliminates all the leading and trailing zeroes
+"   a  b"  by trim() -----   "a  b"
+"a b    "  by trim() -----   "a b"
+
+Now traverse the string from back and when get space break and return the length
+
+*/
