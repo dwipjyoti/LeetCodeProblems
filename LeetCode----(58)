@@ -1,4 +1,5 @@
 /* Question :- Length of Last Word of a String */
+/* There may be one or more blanck spaces at last */
 
 /* We can solve it by In-Built methods also shown in last */
 
