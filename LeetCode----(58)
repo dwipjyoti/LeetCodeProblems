@@ -3,7 +3,6 @@
 
 /* We can solve it by In-Built methods also shown in last */
 
-
 class Solution {
     public int lengthOfLastWord(String s) {
         if(s.length()==0){
