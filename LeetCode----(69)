@@ -5,7 +5,7 @@
  * this mid*mid value will get overflow....this is the error
  *
  * So we can use LONG datatype
- 
+ *
  * on return value the value should be integer so we typecast the value to int
  *
  * suppose if number is 125
