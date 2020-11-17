@@ -3,7 +3,7 @@
  * this input will show error as when you take out half of input then end=1073697799
  * when find mid=start+end/2 i.e. mid=1+1073697799/2 then mid=536848899
  * this mid*mid value will get overflow....this is the error
- *
+ 
  * So we can use LONG datatype
  *
  * on return value the value should be integer so we typecast the value to int
