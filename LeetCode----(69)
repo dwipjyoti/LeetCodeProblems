@@ -1,0 +1,41 @@
+/* Question :- find square root of a number. if not perfect square then return its integer part only */
+/* Input:2147395599, Output:1073697799, Expected:46339
+ * this input will show error as when you take out half of input then end=1073697799
+ * when find mid=start+end/2 i.e. mid=1+1073697799/2 then mid=536848899
+ * this mid*mid value will get overflow....this is the error
+ 
+ * So we can use LONG datatype
+ 
+ * on return value the value should be integer so we typecast the value to int
+ *
+ * suppose if number is 125
+ * then it will atmost divided by 125/2 which is 62.5
+ * within 0 to 62.5 the ssquare root of 125 will lie........so half number means O(log n)
+ * now we apply binary search with in this range and check mid*mid==number......so again O(log n)
+ */
+
+class Solution {
+    public int mySqrt(int x) {
+        long start=0;
+        long end=x/2;//a number will atmost divided by its half
+        if(x==0 || x==1){
+            return x;
+        }
+        long ansForIntegerPart=0;
+        while(start<=end){
+            long mid=start+((end-start)/2);//if you take mid=start+end/2....then mid will overflow
+            if(mid*mid==x){
+                return (int)mid;
+            }
+            else if(mid*mid > x){
+                end=mid-1;
+            }
+            else{
+                start=mid+1;
+                ansForIntegerPart=mid;//this is done when number is not a perfect sqaure
+            }
+        }
+        return (int)ansForIntegerPart;
+    }
+}
+      
