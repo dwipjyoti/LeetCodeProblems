@@ -14,6 +14,7 @@
  * now we apply binary search with in this range and check mid*mid==number......so again O(log n)
  */
 
+
 class Solution {
     public int mySqrt(int x) {
         long start=0;
